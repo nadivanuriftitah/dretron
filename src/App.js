@@ -11,11 +11,6 @@ import QuizTopics from "./pages/quiztopics.js";
 import QuizPlaces from "./pages/quizplaces.js";
 import LearnTopics from "./pages/learntopics.js";
 import LearnPlaces from "./pages/learn/learnplaces.js";
-import LearnPenang from "./pages/learn/learnpenang.js";
-import LearnPerlis from "./pages/learn/learnperlis.js";
-import LearnSarawak from "./pages/learn/learnsarawak.js";
-import LearnFood from "./pages/learn/learnfood.js";
-import LearnClothes from "./pages/learn/learnclothes.js";
 import Menu from "./pages/menu.js";
 import Profile from "./pages/profile.js";
 import Error from "./pages/error.js";
@@ -23,6 +18,11 @@ import {Button, Container} from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Leaderboard from "./pages/leaderboard.js";
 import QuizPage from "./pages/quiz/quizpage.js";
+import LearnPage from './pages/learn/learnpage.js';
+
+// Inside your routes
+<Route path="/learn/:topic" element={<LearnPage />} />
+
 
 function BackButton() {
     const navigate = useNavigate();
@@ -67,12 +67,7 @@ function App() {
                         <Route path="learn" element={<LearnTopics/>}/>
                         <Route path="quiz" element={<QuizTopics/>}/>
                         <Route path="learnplaces" element={<LearnPlaces/>}/>
-                        <Route path="learnpenang" element={<LearnPenang/>}/>
-                        <Route path="learnperlis" element={<LearnPerlis/>}/>
-                        <Route path="learnsarawak" element={<LearnSarawak/>}/>
                         <Route path="quiz/places" element={<QuizPlaces/>}/>
-                        <Route path="learnfood" element={<LearnFood/>}/>
-                        <Route path="learnclothes" element={<LearnClothes/>}/>
                         <Route path="*" element={<Error/>}/>
                         <Route path="leaderboard" element={<Leaderboard/>}/>
                         <Route path="quizpage" element={<QuizPage/>}/>
@@ -81,6 +76,7 @@ function App() {
                         <Route path="/quiz/places/penang" element={<QuizPage topic="penang" />} />
                         <Route path="/quiz/places/perlis" element={<QuizPage topic="perlis" />} />
                         <Route path="/quiz/places/sarawak" element={<QuizPage topic="sarawak" />} />
+                        <Route path="/learn/:topic" element={<LearnPage />} />
                     </Route>
                 </Routes>
         </Container>

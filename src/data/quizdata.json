@@ -132,7 +132,7 @@
     },
     {
       "question": "What is Penang Bridge known for?",
-      "image": "",
+      "image": "penang_bridge.jpg",
       "answer_choices": ["Having a glass-bottomed section", "Being the oldest bridge in Malaysia", "Being one of the longest bridges in Southeast Asia", "Connecting Malaysia to Singapore"],
       "correct_answer": "Being one of the longest bridges in Southeast Asia",
       "description": "Penang Bridge is one of the longest bridges in Southeast Asia, spanning 13.5 kilometers. It connects the island of Penang to the mainland, playing a crucial role in transportation and economic development."
